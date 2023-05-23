@@ -49,7 +49,7 @@ yarn            # yarn
 
 ### ATENÇÃO
 
-Para simular o back-end o projeto está usando o json-server rodando a simulação de um backend através do arquivo db.json, para rodar localmente o json server, verifique se a posta 3004 está disponível.
+Para simular o back-end do projeto, está sendo usando a lib "json-server", rodando através do arquivo db.json, para rodar localmente o json server, verifique se a posta 3004 está disponível.
 
 ```
 npm run server

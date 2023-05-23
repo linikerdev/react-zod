@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { getUsers } from './services'
+import { User, getUsers } from './services'
 
 function App() {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState<User[]>([])
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const callRequest = async () => {
-    const result = await getUsers()
+  const callRequest = useCallback(async () => {
+    const result: User[] = await getUsers()
     if (result) {
-      setUsers(result.data)
+      setUsers(result)
     }
     return false
-  }
+  }, [])
 
   useEffect(() => {
     callRequest()
@@ -32,9 +32,9 @@ function App() {
       <hr />
       <div className="title"></div>
       <div className="users">
-        {users && users.map((user) => (
+        {users && users.map((user: User) => (
           <div key={user.id} className="user">
-            <img className='user-avatar' src={user.avatar} alt={user.username} />
+            <img className='user-avatar' src={user.avatar} alt={user.name} />
             <div className="user-info">
               <div>{user.name}</div>
               <div>{user.email}</div>

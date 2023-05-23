@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": "646cdb69627ac577e29f3034",
+      "name": "Ayala Weaver",
+      "email": "ayalaweaver@opportech.com",
+      "isActive": false,
+      "avatar": "http://placehold.it/32x32",
+      "company": "CORECOM"
+    },
+    {
+      "id": "646cdb69e16c9ff5a5a28482",
+      "name": "Fuentes Bass",
+      "email": "fuentesbass@corecom.com",
+      "isActive": false,
+      "avatar": "http://placehold.it/32x32",
+      "company": "FROLIX"
+    },
+    {
+      "id": "646cdb696b6220be0a956b6e",
+      "name": "Celina Case",
+      "email": "celinacase@frolix.com",
+      "isActive": true,
+      "avatar": "http://placehold.it/32x32",
+      "company": "OPTICON"
+    },
+    {
+      "id": "646cdb69baffad417ff692a7",
+      "name": "Jimenez Bradford",
+      "email": "jimenezbradford@opticon.com",
+      "isActive": true,
+      "avatar": "http://placehold.it/32x32",
+      "company": "WARETEL"
+    },
+    {
+      "id": "646cdb69621b50cd39a509c8",
+      "name": "Terry Mckenzie",
+      "email": "terrymckenzie@waretel.com",
+      "isActive": true,
+      "avatar": "http://placehold.it/32x32",
+      "company": "FURNITECH"
+    },
+    {
+      "id": "646cdb69182318c549212a8b",
+      "name": "Concepcion Luna",
+      "email": "concepcionluna@furnitech.com",
+      "isActive": true,
+      "avatar": "http://placehold.it/32x32",
+      "company": "ENOMEN"
+    }
+  ]
+}

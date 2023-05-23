@@ -10,7 +10,7 @@ const UserSchema = z.object({
     "email": z.string().email({ message: 'usuário não existe' }),
     "isActive": z.boolean(),
     "avatar": z.string(),
-    "phone": z.string(),
+    "phone": z.string().optional(), // esse optional é para deixar o item "phone" como optcional na interface e no schema.
     "company": z.string(),
 });
 
@@ -21,7 +21,7 @@ export type User = z.infer<typeof UserSchema>;
 
 export const getUsers = async () => {
 
-    const url = 'http://localhost:3000/users'
+    const url = 'http://localhost:3004/users'
 
     // condition 1 (parse)
     try {

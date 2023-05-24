@@ -2,8 +2,11 @@ import { useCallback, useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import { User, getUsers } from './services'
+import ListUsers from './components/list'
+import Form from './components/form'
 
 function App() {
+  const [isList, setIsList] = useState<boolean>(true)
   const [users, setUsers] = useState<User[]>([])
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const callRequest = useCallback(async () => {
@@ -29,18 +32,17 @@ function App() {
         </a>
       </div>
       <h1>ZOD + React</h1>
+
+      <div className="createUser">
+        {isList ? <button onClick={() => setIsList(false)}>Novo Usuário</button> : <button onClick={() => setIsList(true)}> Lista de Usuário</button>}
+
+
+      </div >
+
       <hr />
       <div className="title"></div>
       <div className="users">
-        {users && users.map((user: User) => (
-          <div key={user.id} className="user">
-            <img className='user-avatar' src={user.avatar} alt={user.name} />
-            <div className="user-info">
-              <div>{user.name}</div>
-              <div>{user.email}</div>
-            </div>
-          </div>
-        ))}
+        {isList ? <ListUsers users={users} /> : <Form />}
       </div>
     </>
   )
